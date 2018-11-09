@@ -4,7 +4,10 @@ INSERT INTO burgers (burger_name, devoured)
 VALUES (chicken sandwich, false);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES (bacon burger, false);
+VALUES ("bacon burger", false);
 
 INSERT INTO burgers (burger_name, devoured)
-VALUES (veggie burger, false);
+VALUES ("veggie burger", false);
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("slider", true);
