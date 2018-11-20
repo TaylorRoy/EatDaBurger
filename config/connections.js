@@ -1,15 +1,19 @@
 var mysql = require("mysql");
 
+var connection;
 
-var PORT = process.env.PORT || 8080;
-
-var connection = mysql.createConnection({
-    hots: "localhost",
-    port: 3306,
-    user: "root",
-    password: "password",
-    database: "burger_db"
-})
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+}
+else {
+    connection = mysql.createConnection({
+        hots: "localhost",
+        port: 3306,
+        user: "root",
+        password: "password",
+        database: "burger_db"
+    });
+}
 
 connection.connect(function (error, result) {
     if (error) throw error;
